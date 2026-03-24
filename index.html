@@ -1,0 +1,873 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Corporations Chino S.A.C. - Asesoría comercial y sistemas en Arequipa</title>
+
+  <meta name="description" content="Asesoría comercial, finanzas, diseño web y sistemas para hoteles, restaurantes, discotecas y casinos en Arequipa.">
+
+  <meta name="keywords" content="asesoría comercial Arequipa, diseño web Arequipa, sistemas para hoteles, software restaurantes, sistemas discotecas, asesor financiero Perú">
+
+  <meta name="author" content="Corporations Chino S.A.C.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Corporations Chino S.A.C.">
+  <meta property="og:description" content="Asesoría comercial, finanzas y sistemas empresariales en Arequipa.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2d;
+      --card: rgba(255,255,255,0.06);
+      --card-border: rgba(255,255,255,0.12);
+      --text: #f4f7fb;
+      --muted: #b8c3d1;
+      --primary: #1f8fff;
+      --primary-2: #20c997;
+      --accent: #f7b500;
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(31,143,255,.18), transparent 26%),
+        radial-gradient(circle at left center, rgba(32,201,151,.12), transparent 22%),
+        linear-gradient(180deg, #08111d 0%, #0b1524 50%, #08111d 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: rgba(7, 17, 31, 0.78);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .brand-badge {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 8px 24px rgba(31,143,255,.35);
+      font-size: 1.1rem;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.18);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 92px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      color: #d6e3f3;
+      font-size: .9rem;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.3rem, 4vw, 4.6rem);
+      line-height: 1.04;
+      letter-spacing: -.03em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fff 0%, #8cc8ff 45%, #81ffd4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1.06rem;
+      max-width: 680px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #4db2ff);
+      color: white;
+      box-shadow: 0 10px 30px rgba(31,143,255,.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.12);
+      color: #fff;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.45rem;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -60px -60px auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(31,143,255,.35), transparent 65%);
+    }
+
+    .mini-label {
+      color: #9cd0ff;
+      font-size: .85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 14px;
+    }
+
+    .service-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 24px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.09);
+      color: #eaf3ff;
+      font-size: .92rem;
+    }
+
+    .card-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .list-item {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    section {
+      padding: 34px 0 78px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .section-head span {
+      color: #8fd3ff;
+      font-size: .88rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 800;
+    }
+
+    .section-head h2 {
+      margin: 10px 0 12px;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1.1;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(31,143,255,.38);
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(31,143,255,.22), rgba(32,201,151,.18));
+      border: 1px solid rgba(255,255,255,.08);
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+    }
+
+    .card h3 { margin: 0 0 10px; font-size: 1.16rem; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .quote {
+      background: linear-gradient(180deg, rgba(31,143,255,.10), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .quote p {
+      margin: 0 0 14px;
+      color: #eaf3ff;
+      font-size: 1.05rem;
+    }
+
+    .quote small {
+      color: #9fb0c3;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 18px;
+    }
+
+    .contact-panel, .contact-form {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel p,
+    .contact-form p {
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: .92rem;
+      color: #deebf9;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: white;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font: inherit;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: rgba(31,143,255,.7);
+      box-shadow: 0 0 0 4px rgba(31,143,255,.14);
+    }
+
+    textarea { min-height: 140px; resize: vertical; }
+
+    .footer {
+      padding: 28px 0 40px;
+      color: #99a8ba;
+      border-top: 1px solid rgba(255,255,255,.08);
+      margin-top: 26px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1bd741, #0eac31);
+      color: #fff;
+      font-size: 1.55rem;
+      box-shadow: 0 18px 32px rgba(12, 146, 43, .38);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cards-grid,
+      .split,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 16px;
+        right: 16px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(8,17,29,.96);
+        border: 1px solid rgba(255,255,255,.08);
+      }
+
+      .nav-links.active { display: flex; }
+      .menu-btn { display: inline-flex; }
+      .hero { padding-top: 72px; }
+      .hero h1 { font-size: 2.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <div class="brand-badge"></div>
+        <div>
+          <div>CORPORATIONS CHINO S.A.C.</div>
+          <small style="color: var(--muted); font-weight: 500;">Soluciones comerciales y tecnológicas</small>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#mision-vision">Misión y Visión</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn">Menú</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">Asesoría comercial • Finanzas • Desarrollo web • Sistemas de gestión</div>
+          <h1>
+            Impulsamos negocios con
+            <span class="gradient-text">estrategia, tecnología y resultados</span>
+          </h1>
+          <p>
+            En <strong>Corporations Chino S.A.C.</strong> brindamos soluciones profesionales en asesoría comercial,
+            finanzas, diseño web y desarrollo de sistemas de administración para hoteles, bares, discotecas,
+            restaurantes y casinos.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Solicitar asesoría</a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>360°</strong>
+              <span>Enfoque integral en negocio, finanzas y tecnología</span>
+            </div>
+            <div class="stat">
+              <strong>Web + Sistemas</strong>
+              <span>Presencia digital y gestión administrativa en un solo lugar</span>
+            </div>
+            <div class="stat">
+              <strong>Atención directa</strong>
+              <span>Contacto rápido por WhatsApp y correo electrónico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="mini-label">Áreas de especialidad</div>
+          <h2 style="margin:0; font-size: 1.85rem;">Soluciones hechas para empresas que quieren crecer</h2>
+          <div class="service-pills">
+            <div class="pill">Asesor comercial</div>
+            <div class="pill">Finanzas</div>
+            <div class="pill">Diseño web</div>
+            <div class="pill">Sistemas hoteleros</div>
+            <div class="pill">Restaurantes</div>
+            <div class="pill">Bares y discotecas</div>
+            <div class="pill">Casinos</div>
+          </div>
+
+          <div class="card-list">
+            <div class="list-item"><strong>Optimización operativa:</strong> digitalizamos procesos para mejorar control y productividad.</div>
+            <div class="list-item"><strong>Visión estratégica:</strong> alineamos tecnología, ventas y finanzas con los objetivos de tu empresa.</div>
+            <div class="list-item"><strong>Imagen profesional:</strong> construimos páginas web modernas, elegantes y orientadas a captar clientes.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="container">
+        <div class="section-head reveal">
+          <span>Nosotros</span>
+          <h2>Una empresa enfocada en crecimiento, innovación y confianza</h2>
+          <p>
+            Corporations Chino S.A.C. combina experiencia comercial, conocimiento financiero y desarrollo tecnológico
+            para ofrecer servicios de alto nivel a empresas que necesitan modernizarse y destacar en el mercado.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <div class="icon"></div>
+            <h3>Asesoría comercial</h3>
+            <p>Diseñamos estrategias para fortalecer ventas, posicionamiento, negociación y expansión comercial.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon"></div>
+            <h3>Gestión financiera</h3>
+            <p>Brindamos orientación para una mejor toma de decisiones, orden financiero y sostenibilidad empresarial.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon"></div>
+            <h3>Transformación digital</h3>
+            <p>Creamos páginas web y sistemas administrativos a medida, con enfoque práctico, moderno y profesional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mision-vision">
+      <div class="container">
+        <div class="section-head reveal">
+          <span>Misión y visión</span>
+          <h2>La base que guía nuestro trabajo</h2>
+          <p>Construimos soluciones que generen valor real, mejoren procesos y fortalezcan la competitividad de cada cliente.</p>
+        </div>
+
+        <div class="split">
+          <div class="quote reveal">
+            <h3 style="margin-top:0; font-size:1.4rem;">Misión</h3>
+            <p>
+              Brindar asesoría comercial, financiera y tecnológica con altos estándares de calidad, desarrollando
+              páginas web y sistemas de administración que impulsen el crecimiento, la eficiencia y la modernización
+              de empresas en diversos sectores.
+            </p>
+            <small>Comprometidos con resultados concretos y atención personalizada.</small>
+          </div>
+
+          <div class="quote reveal">
+            <h3 style="margin-top:0; font-size:1.4rem;">Visión</h3>
+            <p>
+              Ser una empresa referente en soluciones empresariales integrales, reconocida por su innovación,
+              profesionalismo y capacidad de transformar negocios a través de estrategias comerciales, financieras y digitales.
+            </p>
+            <small>Orientados a construir relaciones duraderas y marcas sólidas.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head reveal">
+          <span>Servicios</span>
+          <h2>Soluciones diseñadas para cada tipo de negocio</h2>
+          <p>
+            Ofrecemos servicios profesionales que integran gestión, automatización, imagen digital y soporte estratégico.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <div class="icon">🌐</div>
+            <h3>Diseño y desarrollo web</h3>
+            <p>Creación de páginas web modernas, responsivas, elegantes y orientadas a generar confianza y clientes.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🏨</div>
+            <h3>Sistemas para hoteles</h3>
+            <p>Automatización y control administrativo para reservas, operaciones, reportes y gestión interna.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🍽️</div>
+            <h3>Sistemas para restaurantes</h3>
+            <p>Gestión de pedidos, caja, inventario, reportes y administración eficiente del negocio gastronómico.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🎵</div>
+            <h3>Sistemas para bares y discotecas</h3>
+            <p>Soluciones administrativas enfocadas en control, rapidez operativa y seguimiento de ventas.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🎰</div>
+            <h3>Sistemas para casinos</h3>
+            <p>Herramientas para fortalecer procesos administrativos, control interno y análisis operativo.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">📊</div>
+            <h3>Consultoría comercial y financiera</h3>
+            <p>Asesoramiento estratégico para mejorar estructura, rentabilidad, procesos y toma de decisiones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes">
+      <div class="container">
+        <div class="section-head reveal">
+          <span>Clientes</span>
+          <h2>Trabajamos para negocios que exigen eficiencia y presencia profesional</h2>
+          <p>
+            Nuestras soluciones están orientadas a empresas y emprendedores que buscan modernizar sus operaciones
+            y elevar la experiencia de sus clientes.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <div class="icon">🏢</div>
+            <h3>Empresas y comercios</h3>
+            <p>Negocios que necesitan asesoría comercial, control financiero y una presencia digital sólida.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🛎️</div>
+            <h3>Hoteles y hospedajes</h3>
+            <p>Establecimientos que buscan ordenar procesos, mejorar administración y profesionalizar su operación.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🍸</div>
+            <h3>Restaurantes, bares y entretenimiento</h3>
+            <p>Negocios que requieren sistemas ágiles, control de ventas e imagen moderna para destacar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <div class="section-head reveal">
+          <span>Contacto</span>
+          <h2>Conversemos sobre tu próximo proyecto</h2>
+          <p>
+            Puedes comunicarte directamente por WhatsApp o correo electrónico. También puedes usar el formulario para abrir tu aplicación de correo con el mensaje listo.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-panel reveal">
+            <h3 style="margin-top:0; font-size:1.45rem;">Atención directa</h3>
+            <p>Personaliza estos datos con tu número de WhatsApp, correo y ubicación real.</p>
+
+            <div class="contact-links">
+              <a class="contact-link" href="https://wa.me/51988509695?text=Hola%20Corporations%20Chino%20S.A.C.%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer">
+                <span style="font-size:1.4rem;"></span>
+                <div>
+                  <strong>WhatsApp directo</strong><br>
+                  <small style="color: var(--muted);">+51 988 509 695</small>
+                </div>
+              </a>
+
+              <a class="contact-link" href="mailto:corporationschino@gmail.com?subject=Consulta%20de%20servicios&body=Hola%20Corporations%20Chino%20S.A.C.%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20servicios.">
+                <span style="font-size:1.4rem;"></span>
+                <div>
+                  <strong>Correo electrónico</strong><br>
+                  <small style="color: var(--muted);">corporationschino@gmail.com</small>
+                </div>
+              </a>
+
+              <div class="contact-link">
+                <span style="font-size:1.4rem;"></span>
+                <div>
+                  <strong>CONSULTE</strong><br>
+                  <small style="color: var(--muted);">BIEN VENID@</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form reveal">
+            <h3 style="margin-top:0; font-size:1.45rem;">Formulario de contacto</h3>
+            <p>Al enviar, se abrirá Gmail o tu aplicación de correo con el mensaje preparado automáticamente.</p>
+
+            <form id="contactForm">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+              </div>
+
+              <div class="field">
+                <label for="servicio">Servicio de interés</label>
+                <input type="text" id="servicio" name="servicio" placeholder="Ej. Diseño web, sistema hotelero, asesoría financiera">
+              </div>
+
+              <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>
+        <strong>Corporations Chino S.A.C.</strong><br>
+        <small>Asesoría comercial, finanzas, diseño web y sistemas administrativos.</small>
+      </div>
+      <div>
+        <small>© <span id="year"></span> Corporations Chino S.A.C. Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/51988509695?text=Hola%20Corporations%20Chino%20S.A.C.%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    ✆
+  </a>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const year = document.getElementById('year');
+    const form = document.getElementById('contactForm');
+
+    year.textContent = new Date().getFullYear();
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const servicio = document.getElementById('servicio').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      const subject = encodeURIComponent(`Consulta desde la web - ${nombre}`);
+      const body = encodeURIComponent(
+        `Nombre: ${nombre}\nCorreo: ${email}\nServicio de interés: ${servicio}\n\nMensaje:\n${mensaje}`
+      );
+
+      const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=corporationschino@gmail.com&su=${subject}&body=${body}`;
+      window.open(gmailURL, '_blank');
+    });
+  </script>
+</body>
+</html>
